@@ -1,0 +1,14 @@
+version: "3"
+services:
+  agent:
+    image: agent_tool:latest
+    container_name: agent_tool
+    build: .
+    restart: always
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+      - "8002:8002"
+      - "8003:8003"
+    volumes:
+      - "./conf:/conf"
